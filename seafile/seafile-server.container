@@ -1,0 +1,14 @@
+[Unit]
+Requires=seafile-mariadb.service
+After=seafile-mariadb.service
+
+[Container]
+ContainerName=seafile-server
+Environment=DB_HOST=seafile-mariadb DB_ROOT_PASSWD=db_dev TIME_ZONE=Europe/Moscow HTTPS=false SEAFILE_URL=172.20.2.11
+HealthCmd=["nc","-z","localhost","8082"]
+HealthInterval=10s
+HealthRetries=3
+HealthTimeout=10s
+Image=docker.io/ggogel/seafile-server:11.0.9
+Network=seafile.network
+Volume=/home/rootless/volumes/seafile-data:/shared

@@ -1,0 +1,5 @@
+[Container]
+ContainerName=seafile-caddy
+Image=docker.io/ggogel/seafile-caddy:2.7.6
+Network=seafile.network
+PublishPort=9005:80

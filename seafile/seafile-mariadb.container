@@ -1,0 +1,10 @@
+[Container]
+ContainerName=seafile-mariadb
+Environment=MYSQL_ROOT_PASSWORD=db_dev MYSQL_LOG_CONSOLE=true MARIADB_AUTO_UPGRADE=true
+HealthCmd=["healthcheck.sh","--su-mysql","--connect","--innodb_initialized"]
+HealthInterval=10s
+HealthRetries=3
+HealthTimeout=10s
+Image=docker.io/library/mariadb:10.11.8
+Network=seafile.network
+Volume=/home/rootless/volumes/seafile-mariadb:/var/lib/mysql
