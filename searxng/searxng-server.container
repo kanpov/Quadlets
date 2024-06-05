@@ -1,0 +1,9 @@
+[Container]
+AddCapability=CHOWN SETGID SETUID
+ContainerName=searxng-server
+DropCapability=ALL
+Environment=SEARXNG_BASE_URL=http://172.20.2.11:9004/
+Image=docker.io/searxng/searxng:latest
+Network=searxng.network
+PublishPort=9004:8080
+Volume=/home/rootless/volumes/searxng-settings:/etc/searxng

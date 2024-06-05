@@ -1,0 +1,18 @@
+[Unit]
+Requires=forgejo-db.service
+After=forgejo-db.service
+WantedBy=multi-user.target default.target
+
+[Container]
+ContainerName=forgejo-server
+Environment=USER_UID=1000 USER_GID=1000 FORGEJO__database__DB_TYPE=postgres FORGEJO__database__HOST=forgejo-db:5432 FORGEJO__database__NAME=forgejo FORGEJO__database__USER=forgejo FORGEJO__database__PASSWD=forgejo
+Image=codeberg.org/forgejo/forgejo:7
+Network=forgejo.network
+Volume=/home/rootless/volumes/forgejo-data:/data
+Volume=/etc/timezone:/etc/timezone:ro
+Volume=/etc/localtime:/etc/localtime:ro
+PublishPort=9001:3000
+PublishPort=9002:22
+
+[Service]
+Restart=always

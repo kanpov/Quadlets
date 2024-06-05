@@ -1,0 +1,12 @@
+[Unit]
+WantedBy=multi-user.target default.target
+
+[Container]
+ContainerName=invidious-db
+Environment=POSTGRES_DB=invidious POSTGRES_USER=kemal POSTGRES_PASSWORD=kemal
+HealthCmd=pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB
+Image=docker.io/library/postgres:14
+Network=invidious.network
+Volume=/home/rootless/volumes/invidious-db:/var/lib/postgresql/data
+Volume=./sql-scripts:/config/sql
+Volume=./init-invidious-db.sh:/docker-entrypoint-initdb.d/init-invidious-db.sh
