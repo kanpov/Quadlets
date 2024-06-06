@@ -1,5 +1,4 @@
 [Container]
-ContainerName=searxng-cache
 Exec=valkey-server
 Image=docker.io/valkey/valkey:7-alpine
 Pod=searxng.pod
