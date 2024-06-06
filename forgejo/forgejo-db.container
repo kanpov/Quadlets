@@ -1,9 +1,6 @@
-[Unit]
-WantedBy=multi-user.target default.target
-
 [Container]
 ContainerName=forgejo-db
 Environment=POSTGRES_USER=forgejo POSTGRES_PASSWORD=forgejo POSTGRES_DB=forgejo
 Image=docker.io/library/postgres:16
 Network=forgejo.network
-Volume=/home/rootless/volumes/forgejo-db:/var/lib/postgresql/data
+Volume=/var/opt/forgejo-db:/var/lib/postgresql/data:z

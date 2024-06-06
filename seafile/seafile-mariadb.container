@@ -7,4 +7,4 @@ HealthRetries=3
 HealthTimeout=10s
 Image=docker.io/library/mariadb:10.11.8
 Network=seafile.network
-Volume=/home/rootless/volumes/seafile-mariadb:/var/lib/mysql
+Volume=/var/opt/seafile-mariadb:/var/lib/mysql:z

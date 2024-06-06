@@ -7,6 +7,6 @@ ContainerName=seahub
 Environment=SEAFILE_ADMIN_EMAIL=karpovanton729@gmail.com SEAFILE_ADMIN_PASSWORD=495762
 Image=docker.io/ggogel/seahub:11.0.9
 Network=seafile.network
-Volume=/home/rootless/volumes/seafile-data:/shared
-Volume=/home/rootless/volumes/seahub-avatars:/shared/seafile/seahub-data/avatars
-Volume=/home/rootless/volumes/seahub-custom:/shared/seafile/seahub-data/custom
+Volume=/var/opt/seafile-data:/shared:z
+Volume=/var/opt/seahub-avatars:/shared/seafile/seahub-data/avatars:z
+Volume=/var/opt/seahub-custom:/shared/seafile/seahub-data/custom:z

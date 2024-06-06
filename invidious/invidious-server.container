@@ -1,8 +1,3 @@
-[Unit]
-Requires=invidious-db.service
-After=invidious-db.service
-WantedBy=multi-user.target default.target
-
 [Container]
 ContainerName=invidious-server
 Environment="INVIDIOUS_CONFIG=db:\n  dbname: invidious\n  user: kemal\n  password: kemal\n  host: invidious-db\n  port: 5432\ncheck_tables: true\n# external_port:\n# domain:\n# https_only: false\n# statistics_enabled: false\nhmac_key: "myhmackey"\n"

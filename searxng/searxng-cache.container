@@ -1,8 +1,6 @@
 [Container]
-AddCapability=SETGID SETUID
 ContainerName=searxng-cache
-DropCapability=ALL
 Exec=valkey-server
 Image=docker.io/valkey/valkey:7-alpine
 Network=searxng.network
-Volume=/home/rootless/volumes/searxng-cache:/data
+Volume=/var/opt/searxng-cache:/data:z

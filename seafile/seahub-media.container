@@ -2,5 +2,5 @@
 ContainerName=seahub-media
 Image=docker.io/ggogel/seahub-media:11.0.9
 Network=seafile.network
-Volume=/home/rootless/volumes/seahub-avatars:/usr/share/caddy/media/avatars
-Volume=/home/rootless/volumes/seahub-custom:/usr/share/caddy/media/custom
+Volume=/var/opt/seahub-avatars:/usr/share/caddy/media/avatars:z
+Volume=/var/opt/seahub-custom:/usr/share/caddy/media/custom:z

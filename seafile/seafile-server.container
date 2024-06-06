@@ -11,4 +11,4 @@ HealthRetries=3
 HealthTimeout=10s
 Image=docker.io/ggogel/seafile-server:11.0.9
 Network=seafile.network
-Volume=/home/rootless/volumes/seafile-data:/shared
+Volume=/var/opt/seafile-data:/shared:z
