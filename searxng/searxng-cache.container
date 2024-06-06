@@ -2,5 +2,5 @@
 ContainerName=searxng-cache
 Exec=valkey-server
 Image=docker.io/valkey/valkey:7-alpine
-Network=searxng.network
+Pod=searxng.pod
 Volume=/var/opt/searxng-cache:/data:z
