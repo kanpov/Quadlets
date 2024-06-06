@@ -1,5 +1,5 @@
 [Container]
-Environment=USER_UID=1000 USER_GID=1000 FORGEJO__database__DB_TYPE=postgres FORGEJO__database__HOST=forgejo-db:5432 FORGEJO__database__NAME=forgejo FORGEJO__database__USER=forgejo FORGEJO__database__PASSWD=forgejo
+Environment=USER_UID=1000 USER_GID=1000 FORGEJO__database__DB_TYPE=postgres FORGEJO__database__HOST=0.0.0.0:5432 FORGEJO__database__NAME=forgejo FORGEJO__database__USER=forgejo FORGEJO__database__PASSWD=forgejo
 Image=codeberg.org/forgejo/forgejo:7
 Volume=/var/opt/forgejo-data:/data:z
 Pod=forgejo.pod
