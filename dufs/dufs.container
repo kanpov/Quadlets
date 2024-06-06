@@ -1,0 +1,6 @@
+[Container]
+Exec=/data -A
+Image=docker.io/sigoden/dufs
+ContainerName=dufs
+PublishPort=9006:5000
+Volume=/home/rootless/volumes/dufs-data:/data

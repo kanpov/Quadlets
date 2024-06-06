@@ -1,6 +1,6 @@
 [Unit]
-Requires=seafile-mariadb.service seafile-server.service
-After=seafile-mariadb.service seafile-server.service
+Requires=seafile-mariadb.service seafile-server.service seafile-memcached.service
+After=seafile-mariadb.service seafile-server.service seafile-memcached.service
 
 [Container]
 ContainerName=seahub

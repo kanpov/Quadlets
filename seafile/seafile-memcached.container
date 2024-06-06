@@ -3,3 +3,4 @@ ContainerName=seafile-memcached
 Exec=memcached -m 1024
 Image=docker.io/library/memcached:1.6.27
 Network=seafile.network
+HostName=memcached
