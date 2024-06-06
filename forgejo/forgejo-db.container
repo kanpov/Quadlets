@@ -1,6 +1,5 @@
 [Container]
-ContainerName=forgejo-db
 Environment=POSTGRES_USER=forgejo POSTGRES_PASSWORD=forgejo POSTGRES_DB=forgejo
 Image=docker.io/library/postgres:16
-Network=forgejo.network
 Volume=/var/opt/forgejo-db:/var/lib/postgresql/data:z
+Pod=forgejo.pod
